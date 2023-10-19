@@ -1,0 +1,244 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;700&display=swap');
+::-webkit-scrollbar {
+  width: .5rem;
+}
+::-webkit-scrollbar-thumb {
+  background: #346040;
+  border-radius: 25px;
+}
+:root {
+  /* font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif; */
+  font-family: Kanit;
+  line-height: 1.5;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.87);
+  
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+  overflow-x: hidden;
+
+  scrollbar-width: thin;
+  scrollbar-color: #346040;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+nav {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  background: #346040;
+}
+
+#navLinks {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  background-color: #346040;
+  width: 100vw;
+  top: 64px;
+  opacity: 0;
+  z-index: -1000;
+  transition: 0.4s;
+  height: calc(100vh - 64px);
+  justify-content: center;
+}
+
+#navLinks a {
+  color: #fff;
+  text-decoration: none;
+}
+#navToggle {
+  position: absolute;
+  left: 90%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  display: inline-block;
+  cursor: pointer;
+}
+
+.bar1,
+.bar2,
+.bar3 {
+  width: 35px;
+  height: 5px;
+  background-color: #fff;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+.change .bar1 {
+  transform: translate(0, 11px) rotate(-45deg);
+}
+
+.change .bar2 {
+  opacity: 0;
+}
+
+.change .bar3 {
+  transform: translate(0, -11px) rotate(45deg);
+}
+
+#navLinks.change {
+  opacity: 100;
+  z-index: 100;
+  height: calc(100vh - 64px);
+  justify-content: center;
+}
+
+#navLinks a {
+  text-align: center;
+  transition: 0.4s;
+}
+
+#navLinks.change a {
+  padding: 2rem 0;
+  width: 100%;
+}
+#navLinks.change a:hover {
+  background: #0fb150;
+}
+
+#hero {
+  background-image: url('/images/hero/mobile/background.png');
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+#hero_subtitle {
+  margin-top: 2rem;
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+
+#hero h1 {
+  margin-top: 1.5rem;
+  font-size: 2rem;
+  text-align: center;
+  line-height: 2rem;
+  margin-bottom: 181px;
+}
+
+iframe {
+  position: absolute;
+  top: 100%;
+  transform: translateY(-50%);
+  max-width: 726px;
+  width: calc(100vw - 1rem);
+  height: 220px;
+  border: 0;
+  border-radius: 20px;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, .25);
+}
+#comingSoon.change {
+  opacity: 0;
+  z-index: -1000;
+}
+#comingSoon {
+  transition: .2s;
+  width: 185px;
+  height: 185px;
+  position: absolute;
+  z-index: 2;
+  background-color: #FFDD02;
+  border-radius: 50%;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+  transform: rotate(45deg);
+  top: 105%;
+  left: 60%;
+}
+
+#optInOne {
+  color: #000;
+  margin-top: 225px;
+  padding: 0 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+#optInOne h2{
+  font-size: 1rem;
+}
+
+#optInOne p {
+
+}
+
+#optInOne span {
+  color: #2DA75A;
+}
+
+#optInOne form {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  width: calc(100vw - 2rem);
+}
+
+#optInOne form input{
+  width: 100%;
+  padding: .8rem;
+  color: darkgray;
+  font-size: 1.12rem;
+  outline: 0;
+  border: 1px solid #2DA75A;
+}
+#optInOne form button{
+  width: 100%;
+  background-color: #2DA75A;
+  font-weight: 700;
+  font-size: 1.25rem;
+  padding: .8rem;
+  border: #2DA75A;
+  color: #fff;
+}
+@media only screen and (min-width: 875px) {
+  nav {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1rem;
+  }
+  #navToggle {
+    display: none;
+  }
+  #navLinks {
+    top: 0;
+    position: relative;
+    opacity: 100;
+    z-index: 1;
+    display: flex;
+    flex-direction: row;
+    width: auto;
+    height: 110px;
+  }
+  #navLinks a {
+    display: flex;
+    padding: 1rem 1.5rem;
+    text-align: center;
+    height: 100%;
+    align-items: center;
+  }
+  #navLinks a:hover {
+    background: #0fb150;
+  }
+}

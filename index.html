@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Rise & Fall Of Mo'Money Taxes</title>
+  </head>
+  <body>
+    <nav>
+      <a href="/" id="mo-money-logo"
+        ><img src="/mo-money-taxes-logo.png" alt="Mo Money Taxes Logo"
+      /></a>
+      <div id="navLinks">
+        <a href="#about-mo-money-taxes">About Mo'Money Taxes</a>
+        <a href="#where-are-they-now">Co-Founders & More</a>
+        <a href="#about-the-film">Film</a>
+        <a href="#mo-money-taxes-over-the-years">Media</a>
+        <a href="/contact-us">Contact Us</a>
+      </div>
+      <div id="navToggle" onclick="toggleNavButton(this)">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+      </div>
+    </nav>
+    <section id="hero">
+      <p id="hero_subtitle">Mo'Money Taxes Ent Presents</p>
+      <h1>The Rise & Fall Of Mo'Money Taxes</h1>
+      <iframe src="https://www.youtube.com/embed/tgbNymZ7vqY"></iframe>
+      <div id="comingSoon">Comming<br/>Soon</div>
+    </section>
+    <section id="optInOne">
+      <h2>Watch The Rise and Fall Of Mo Money Taxes</h2>
+      <p><span>Some Quote About film</span> - dolor sit amet, consectetur adipiscing elit. Nullam commodo velit ex, non ultrices leo auctor at.</p>
+      <form action="">
+        <label for="">
+          <input type="email" placeholder="Enter Your Email">
+        </label>
+        <button>Get Updates On Film</button>
+      </form>
+      <p>The Tax Industry Will Never Be The Same</p>
+    </section>
+    <script>
+      function toggleNavButton(x) {
+        x.classList.toggle('change');
+        document.querySelector('#navLinks').classList.toggle('change');
+      }
+    </script>
+  </body>
+</html>
