@@ -1,17 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;700&display=swap');
-::-webkit-scrollbar {
-  width: .5rem;
-}
-::-webkit-scrollbar-thumb {
-  background: #346040;
-  border-radius: 25px;
-}
+
 :root {
-  /* font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif; */
-  font-family: Kanit;
+  --hunter-green: #346040;
+  --main-green: #2DA75A;
+  --highlight-gold: #FFDD02;
+
+  font-family: Kanit, sans-serif;
   line-height: 1.5;
   font-weight: 400;
-  color: rgba(255, 255, 255, 0.87);
   
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -23,24 +19,59 @@
   scrollbar-color: #346040;
 }
 
+::-webkit-scrollbar {
+  width: .5rem;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--hunter-green);
+  border-radius: 25px;
+}
+body.change {
+  margin: 0; 
+  height: 100%; 
+  overflow: hidden;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+.cta-button{
+  width: 100%;
+  background-color: var(--main-green);
+  font-weight: 700;
+  font-size: 1.25rem;
+  padding: .8rem;
+  border: var(--main-green);
+  color: #fff;
+}
+
+.gold-subtitle {
+  color: var(--highlight-gold);
+  font-size: 1.125rem;
+}
+
+.text-content {
+  text-align: left;
+}
+
+.text-content span {
+  color: var(--main-green);
+}
 nav {
   display: flex;
   flex-direction: column;
   position: relative;
-  background: #346040;
+  background: var(--hunter-green);
 }
 
 #navLinks {
   position: absolute;
   display: flex;
   flex-direction: column;
-  background-color: #346040;
+  background-color: var(--hunter-green);
   width: 100vw;
   top: 64px;
   opacity: 0;
@@ -90,6 +121,8 @@ nav {
   z-index: 100;
   height: calc(100vh - 64px);
   justify-content: center;
+  height: 100vh;
+  overflow: hidden;
 }
 
 #navLinks a {
@@ -112,6 +145,7 @@ nav {
   flex-direction: column;
   align-items: center;
   position: relative;
+  color: rgba(255, 255, 255, 0.87);
 }
 
 #hero_subtitle {
@@ -139,17 +173,13 @@ iframe {
   border-radius: 20px;
   box-shadow: 0 4px 4px rgba(0, 0, 0, .25);
 }
-#comingSoon.change {
-  opacity: 0;
-  z-index: -1000;
-}
 #comingSoon {
   transition: .2s;
   width: 185px;
   height: 185px;
   position: absolute;
   z-index: 2;
-  background-color: #FFDD02;
+  background-color: var(--highlight-gold);
   border-radius: 50%;
   color: black;
   display: none;
@@ -172,14 +202,11 @@ iframe {
   flex-direction: column;
   align-items: center;
   text-align: center;
+  margin-bottom: 8rem;
 }
 
 #optInOne h2{
   font-size: 1rem;
-}
-
-#optInOne span {
-  color: #2DA75A;
 }
 
 #optInOne form {
@@ -196,17 +223,9 @@ iframe {
   color: darkgray;
   font-size: 1.12rem;
   outline: 0;
-  border: 1px solid #2DA75A;
+  border: 1px solid var(--main-green);
 }
-#optInOne form button{
-  width: 100%;
-  background-color: #2DA75A;
-  font-weight: 700;
-  font-size: 1.25rem;
-  padding: .8rem;
-  border: #2DA75A;
-  color: #fff;
-}
+
 
 #taxIndustryQuote {
   font-weight: 700;
@@ -228,6 +247,76 @@ iframe {
 #right-quote {
   right: 0;
   transform: translateX(100%) translateY(-25%);
+}
+
+#about-mo-money-taxes {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 .5rem;
+  margin-top: 8rem;
+  text-align: center;
+  margin-bottom: 256px;
+}
+
+#about-content {
+  margin-top: 1.5rem;
+}
+
+#about-content h2{
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+#about-backgroud-image {
+  position: absolute;
+  top: -225px;
+  right: 0;
+  background-image: url('/light-mo-money-taxes-mobile-logo.png');
+  width: 333px;
+  height: 383px;
+  background-size: cover;
+  z-index: -1000;
+  /* transform: translateY(50%); */
+}
+
+#where-are-they-now {
+  padding-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 256px;
+}
+#where-content p {
+  font-weight: 700;
+  color: var(--main-green);
+  text-align: center;
+}
+#where-content h2{
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.person {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  
+}
+
+.person h3 {
+  margin-top: 1.5rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  width: 100%;
+}
+.person h3 + p {
+  font-size: 1.25rem;
+  font-weight: 300;
+  width: 100%;
 }
 @media only screen and (min-width: 875px) {
   nav {
