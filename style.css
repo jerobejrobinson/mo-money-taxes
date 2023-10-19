@@ -357,6 +357,8 @@ iframe {
   border: 2px solid var(--highlight-gold);
   padding: 0 .5rem;
   font-size: 1.125rem;
+  border-bottom-left-radius: 5px;
+  border-top-left-radius: 5px;
 }
 
 #optInTwo form button{
@@ -368,6 +370,27 @@ iframe {
   font-weight: 700;
   margin-left: -1%;
   font-size: 1.125rem;
+  border-bottom-right-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+#about-the-film {
+  margin-top: 8rem;
+  padding: 0 .8rem;
+}
+
+.film-headline p{
+  color: var(--main-green);
+  margin-bottom: -11px;
+}
+
+#about-the-film .text {
+  padding: .8rem 0;
+}
+
+#about-the-film p + h3{
+  text-align: center;
+  margin: 2rem 0;
 }
 
 @media only screen and (min-width: 875px) {
