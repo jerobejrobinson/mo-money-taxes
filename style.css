@@ -18,7 +18,6 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
-  overflow-x: hidden;
 
   scrollbar-width: thin;
   scrollbar-color: #346040;
@@ -153,7 +152,7 @@ iframe {
   background-color: #FFDD02;
   border-radius: 50%;
   color: black;
-  display: flex;
+  display: none;
   flex-direction: column;
   text-align: center;
   align-items: center;
@@ -167,7 +166,7 @@ iframe {
 
 #optInOne {
   color: #000;
-  margin-top: 225px;
+  margin-top: 12rem;
   padding: 0 1rem;
   display: flex;
   flex-direction: column;
@@ -179,10 +178,6 @@ iframe {
   font-size: 1rem;
 }
 
-#optInOne p {
-
-}
-
 #optInOne span {
   color: #2DA75A;
 }
@@ -192,6 +187,7 @@ iframe {
   display: flex;
   flex-direction: column;
   width: calc(100vw - 2rem);
+  margin-bottom: 2rem;
 }
 
 #optInOne form input{
@@ -210,6 +206,28 @@ iframe {
   padding: .8rem;
   border: #2DA75A;
   color: #fff;
+}
+
+#taxIndustryQuote {
+  font-weight: 700;
+  font-size: 1rem;
+  position: relative;
+}
+
+.quotes {
+  position: absolute;
+  top: 0;
+  
+}
+
+#left-quote {
+  left: 0;
+  transform: scaleX(-1) scaleY(-1) translateX(100%) translateY(25%);
+}
+
+#right-quote {
+  right: 0;
+  transform: translateX(100%) translateY(-25%);
 }
 @media only screen and (min-width: 875px) {
   nav {
@@ -240,5 +258,9 @@ iframe {
   }
   #navLinks a:hover {
     background: #0fb150;
+  }
+
+  #comingSoon {
+    display: flex;
   }
 }
