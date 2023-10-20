@@ -38,6 +38,18 @@ body.change {
   box-sizing: border-box;
 }
 
+ul {
+  list-style: none;
+}
+
+.cta {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
 .cta-button{
   width: 100%;
   background-color: var(--main-green);
@@ -46,6 +58,15 @@ body.change {
   padding: .8rem;
   border: var(--main-green);
   color: #fff;
+}
+
+.cta-input {
+  width: 100%;
+  padding: .8rem;
+  color: darkgray;
+  font-size: 1.12rem;
+  outline: 0;
+  border: 1px solid var(--main-green);
 }
 
 .gold-subtitle {
@@ -145,7 +166,7 @@ nav {
   flex-direction: column;
   align-items: center;
   position: relative;
-  color: rgba(255, 255, 255, 0.87);
+  color: rgba(255, 255, 255, 1);
 }
 
 #hero_subtitle {
@@ -209,24 +230,6 @@ iframe {
   font-size: 1rem;
 }
 
-#optInOne form {
-  margin-top: 1.5rem;
-  display: flex;
-  flex-direction: column;
-  width: calc(100vw - 2rem);
-  margin-bottom: 2rem;
-}
-
-#optInOne form input{
-  width: 100%;
-  padding: .8rem;
-  color: darkgray;
-  font-size: 1.12rem;
-  outline: 0;
-  border: 1px solid var(--main-green);
-}
-
-
 #taxIndustryQuote {
   font-weight: 700;
   font-size: 1rem;
@@ -236,17 +239,17 @@ iframe {
 .quotes {
   position: absolute;
   top: 0;
-  
 }
 
 #left-quote {
   left: 0;
-  transform: scaleX(-1) scaleY(-1) translateX(100%) translateY(25%);
+  transform: scaleX(-1) scaleY(-1) translateX(90%) translateY(25%);
+
 }
 
 #right-quote {
   right: 0;
-  transform: translateX(100%) translateY(-25%);
+  transform: translateX(90%) translateY(-25%);
 }
 
 #about-mo-money-taxes {
@@ -393,7 +396,182 @@ iframe {
   margin: 2rem 0;
 }
 
-@media only screen and (min-width: 875px) {
+#mo-money-taxes-photo-gallery {
+  margin-bottom: 256px;
+}
+
+footer {
+  background-image: url('/images/footer/mobile-background.png');
+  background-size: cover;
+  position: relative;
+}
+
+footer section {
+  position: relative;
+  top: -1rem;
+  border: 1px var(--main-green) solid;
+  border-radius: 5px;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  width: calc(100vw - 1rem);
+  max-width: 1512px;
+  margin: 0 auto;
+}
+
+footer section > * {
+  margin-bottom: 2rem;
+}
+#footer-copy {
+  color: #fff;
+  text-align: center;
+}
+
+/* Small */
+@media (min-width: 640px) {}
+
+/* Medium */
+@media (min-width: 768px) {
+  #hero {
+    background-image: url('/images/hero/laptop/background.png');
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    height: 556px;
+  }
+  
+  #hero_subtitle {
+    margin-top: 2rem;
+    font-size: 3rem;
+    font-weight: 300;
+  }
+  
+  #hero h1 {
+    margin-top: 1.5rem;
+    font-size: 4rem;
+    text-align: center;
+    line-height: 4rem;
+    margin-bottom: 181px;
+    width: 513px;
+  }
+  
+  iframe {
+    position: absolute;
+    top: 100%;
+    transform: translateY(-50%);
+    max-width: 726px;
+    width: calc(100vw - 1rem);
+    height: 432px;
+    border: 0;
+    border-radius: 20px;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, .25);
+  }
+  #comingSoon {
+    transition: .2s;
+    width: 185px;
+    height: 185px;
+    position: absolute;
+    z-index: 2;
+    background-color: var(--highlight-gold);
+    border-radius: 50%;
+    color: black;
+    display: none;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+    transform: rotate(45deg);
+    top: 105%;
+    left: 60%;
+  }
+  .cta {
+    margin-top: 0;
+  }
+  #optInOne {
+    margin-top: 16rem;
+    position: relative;
+    flex-direction: row;
+    align-items: flex-start;
+    margin-bottom: 8rem;
+    max-width: 746px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  #optInOne h2{
+    text-align: left;
+  }
+
+  #optInOne-textGroup p{
+    text-align: left;
+  }
+  #taxIndustryQuote {
+    font-weight: 700;
+    font-size: 2.8rem;
+    position: absolute;
+    bottom: -8rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 121%;
+  }
+
+  #left-quote {
+    left: 0;
+    transform: scaleX(-1) scaleY(-1) translateX(25%) translateY(20%);
+  
+  }
+  
+  #right-quote {
+    right: 0;
+    transform: translateX(20%) translateY(0%);
+  }
+
+  #about-mo-money-taxes {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 0 .5rem;
+    margin-top: 16rem;
+    text-align: left;
+    margin-bottom: 128px;
+    max-width: 1011px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  #about-content {
+    margin-top: 0;
+    width: 616px;
+  }
+  #about-content h2{
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 3rem;
+  }
+  #about-content button{
+    margin-top: 2.75rem;
+    width: 300px;
+  }
+  
+  #about-backgroud-image {
+    position: absolute;
+    top: -100%;
+    right: -20%;
+    background-image: url('/light-mo-money-taxes-laptop-alt-logo.png');
+    width: 100%;
+    max-width: 841px;
+    height: 950px;
+    background-size: cover;
+    z-index: -1000;
+  }
+}
+
+/* Medium 2 */
+@media (min-width: 875px) {
   nav {
     flex-direction: row;
     align-items: center;
@@ -428,3 +606,12 @@ iframe {
     display: flex;
   }
 }
+
+/* Large  */
+@media (min-width: 1024px) {}
+
+/* xlarge  */
+@media (min-width: 1280px) {}
+
+/* 2xlarge  */
+@media (min-width: 1536px) {}
